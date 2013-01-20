@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "BetterMtgWiki",
+    "version": "0.0.0.1",
+//    "background_page":"background.html",
+    "content_security_policy": "script-src 'self' https://*.googleapis.com; object-src 'self'",
+    "background": {
+        "html": ["background.html"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://mtgwiki.com/*"],
+            "js": ["js/jquery-1.9.0.min.js", "js/init.js", "js/set_marker.js"]
+        }
+    ]
+}
