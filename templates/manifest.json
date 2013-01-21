@@ -10,7 +10,7 @@
     "content_scripts": [
         {
             "matches": ["http://mtgwiki.com/*"],
-            "js": ["js/jquery-1.9.0.min.js","js/standards.js", "js/init.js", "js/set_marker.js"]
+            "js": ["js/standards.js", "js/init.js", "js/set_marker.js"]
         }
     ]
 }

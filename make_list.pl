@@ -23,13 +23,16 @@ if (-d "output") {
 
 my @name;
 for (<$fh>) {
-#    my $utf8 = $enc->decode('Shift_JIS', $_);
-    push(@name, '"' . $1 . '"') if m/英語名：(.*)/;
+    if (m/英語名：(.*)/) {
+        my $ok = $1;
+        $ok =~ s/\s/\\s/;
+        push(@name, '/' . $ok . '/')
+    }
 }
 close $fh;
 
 open my $output, ">", "templates/js/standards.js";
-$output->print("var standards = [\t");
+$output->print("var standards = [\n\t");
 $output->print(join ",\n\t", @name);
 $output->print("\n];\n");
 close $output;
