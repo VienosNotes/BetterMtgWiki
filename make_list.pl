@@ -25,7 +25,6 @@ my @name;
 for (<$fh>) {
     if (m/英語名：(.*)/) {
         my $ok = $1;
-#        $ok =~ s/\s/\\s/;
         push(@name, '"' . $ok . '"')
     }
 }
