@@ -9,7 +9,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["http://mtgwiki.com/*"],
+            "matches": ["http://mtgwiki.com/*", "http://whisper.wisdom-guild.net/*"],
             "js": ["js/standards.js", "js/init.js", "js/set_marker.js"]
         }
     ]
