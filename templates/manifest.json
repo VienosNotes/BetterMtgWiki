@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "BetterMtgWiki",
-    "version": "0.0.0.1",
+    "version": "0.0.0.2",
 //    "background_page":"background.html",
     "content_security_policy": "script-src 'self' https://*.googleapis.com; object-src 'self'",
     "background": {
